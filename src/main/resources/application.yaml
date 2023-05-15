@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          spring-action-client-client-credentials:
+            provider: spring
+            client-id: spring-action-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            client-name: spring-action-client-client-credentials
+            scope: ingredients.read
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
