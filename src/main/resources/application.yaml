@@ -5,13 +5,13 @@ spring:
     oauth2:
       client:
         registration:
-          spring-action-client-client-credentials:
-            provider: spring
+          spring-action-client-id:
+            provider: spring-action-client-provider
             client-id: spring-action-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            client-name: spring-action-client-client-credentials
+            client-name: spring-action-client-name
             scope: ingredients.read
         provider:
-          spring:
+          spring-action-client-provider:
             issuer-uri: http://auth-server:9000
